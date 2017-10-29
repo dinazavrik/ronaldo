@@ -1,0 +1,88 @@
+.inform{
+  position: relative;
+  @include breakpoint(xs){
+    background-color: #003283;
+    padding-top: rem-calc(50);
+  }
+  &__row{
+    @include flex-grid-column(12, 15);
+    @include flex-grid-row;
+    max-width: rem-calc(960);
+    justify-content: center;
+  }
+  &__block{
+    position: absolute;
+    bottom: rem-calc(50);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    @include breakpoint(xs){
+      position: relative;
+      bottom: 0;
+      flex-direction: column;
+      text-align: center;
+      font-size: 75%;
+    }
+  }
+  &__img{
+    position: absolute;
+    bottom: rem-calc(30);
+    @include breakpoint(xs){
+      position: relative;
+      bottom: 0;
+      left:0;
+    }
+    &--left1{
+      left: rem-calc(70);
+      @include breakpoint(xs){
+        left:0;
+      }
+    }
+    &--left2{
+      left: rem-calc(330);
+      @include breakpoint(xs){
+        left:0;
+      }
+    }
+    &--left3{
+      right: rem-calc(95);
+      @include breakpoint(xs){
+       right: 0;
+      }
+    }
+  }
+  &__title{
+    margin-bottom: rem-calc(8);
+    color: $yell-color;
+    font-family: $bold;
+    font-size: rem-calc(44);
+    font-weight: 800;
+    line-height: rem-calc(24);
+    text-transform: uppercase;
+  }
+  &__title:hover{
+    cursor: pointer;
+  }
+  &__title:hover{
+    animation-name: tada;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+  }
+  &__sub-title{
+    color: $white-color;
+    font-family: $light;
+    font-size: rem-calc(12);
+    font-weight: 700;
+    font-style: italic;
+    line-height: rem-calc(24);
+    text-transform: uppercase;
+  }
+  &__txt-block{
+    margin-left: rem-calc(114);
+    @include breakpoint(xs){
+      margin-left: 0;
+      margin-bottom: rem-calc(20);
+    }
+  }
+}

@@ -1,0 +1,88 @@
+.header{
+  height: 130vh;
+  padding-top: rem-calc(51);
+  @include bg-img('img/bg.png');
+  background-attachment: fixed;
+  @include breakpoint(xs){
+    height: 100vh;
+  }
+  &__row{
+    @include flex-grid-column(12, 15);
+    @include flex-grid-row;
+    justify-content: center;
+    max-width: rem-calc(960);
+    position: relative;
+  }
+  &__block1{
+    margin-right: rem-calc(180);
+    text-align: center;
+    @include breakpoint(xs){
+      margin-right: 0;
+      font-size: 75%;
+      margin-bottom: rem-calc(30);
+    }
+  }
+  &__block2{
+    @include breakpoint(xs){
+      font-size: 75%;
+      text-align: center;
+      margin-bottom: rem-calc(30);
+    }
+  }
+  &__title{
+    color: $white-color;
+    font-family: $bold;
+    text-transform: uppercase;
+    margin-bottom: rem-calc(16);
+    &--str1{
+      font-family: $light;
+      font-size: rem-calc(44);
+      font-style: italic;
+      line-height: rem-calc(47);
+    }
+    &--str2{
+      font-size: rem-calc(33);
+      font-weight: 800;
+      line-height: rem-calc(39);
+    }
+    &--str3{
+      font-size: rem-calc(46);
+      font-weight: 800;
+      line-height: rem-calc(39);
+    }
+    &--str4{
+      font-size: rem-calc(38);
+      font-weight: 800;
+      line-height: rem-calc(43);
+    }
+    &--str5{
+      font-size: rem-calc(38);
+      font-weight: 800;
+      line-height: rem-calc(43);
+      padding-left: rem-calc(55);
+      @include breakpoint(xs){
+        padding-left: 0;
+      }
+    }
+    &--str6{
+      color: $yell-color;
+      font-size: rem-calc(59);
+      font-weight: 800;
+      line-height: rem-calc(62);
+      padding-left: rem-calc(85);
+      @include breakpoint(xs){
+        padding-left: 0;
+      }
+    }
+  }
+  &__logo{
+    position: absolute;
+    right: 0;
+    bottom: rem-calc(100);
+    @include breakpoint(xs){
+      position: inherit;
+      bottom: 0;
+    }
+  }
+}
+

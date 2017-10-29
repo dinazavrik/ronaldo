@@ -1,0 +1,53 @@
+.img-btn{
+  &__row{
+    @include flex-grid-column(12, 15);
+    @include flex-grid-row;
+    justify-content: center;
+    position: relative;
+  }
+  &__image{
+    position: absolute;
+    top: rem-calc(-120);
+    right: rem-calc(45);
+    transition: all .3s ease;
+    @include breakpoint(xs){
+      display: none;
+    }
+  }
+  &__image-img{
+    opacity: 0;
+  }
+  &__sign{
+    position: absolute;
+    right: rem-calc(200);
+    top: rem-calc(150);
+    @include breakpoint(xs){
+     display: none;
+    }
+  }
+  &__button{
+    position: absolute;
+    left: rem-calc(490);
+    top: rem-calc(360);
+    background-color: #b9091f;
+    padding: rem-calc(15);
+    border: 1px solid #8a0921;
+    border-radius: rem-calc(25);
+    color: $white-color;
+    font-family: $bold;
+    text-transform: uppercase;
+    font-weight: 800;
+    transition: all .3s ease;
+    @include breakpoint(xs){
+      position: relative;
+      left:0;
+      top:0;
+      margin-top: rem-calc(30);
+    }
+  }
+  &__button:hover{
+    cursor: pointer;
+    color: darkseagreen;
+    border: 1px solid red;
+  }
+}
